@@ -1,0 +1,79 @@
+version: "2.4"
+
+services:
+
+  solution:
+    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-solution:${VERSION:-latest}
+    build:
+      context: .
+      dockerfile: ./docker/build/solution/Dockerfile
+      args:
+        BASE_IMAGE: ${SOLUTION_BASE_IMAGE}
+        BUILD_IMAGE: ${SOLUTION_BUILD_IMAGE}
+        BUILD_CONFIGURATION: ${BUILD_CONFIGURATION}
+    scale: 0    
+
+  traefik:
+    volumes:
+      - ./docker/traefik:C:/etc/traefik
+
+  mssql:
+    mem_limit: 2GB
+    volumes:
+      - ${LOCAL_DATA_PATH}\mssql:c:\data
+
+  mssql-init:
+    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-xm1-mssql-init:${VERSION:-latest}
+    build:
+      context: ./docker/build/mssql-init
+      args:
+        BASE_IMAGE: ${SITECORE_DOCKER_REGISTRY}sitecore-xm1-mssql-init:${SITECORE_VERSION}
+        SPE_IMAGE: ${SITECORE_MODULE_REGISTRY}sitecore-spe-assets:${SPE_VERSION}
+
+  # Mount our Solr data folder
+  solr:
+    volumes:
+      - ${LOCAL_DATA_PATH}\solr:c:\data
+
+  id:
+    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-id:${VERSION:-latest}
+    build:
+      context: ./docker/build/id
+      args:
+        BASE_IMAGE: ${SITECORE_DOCKER_REGISTRY}sitecore-id7:${SITECORE_VERSION}
+    depends_on:
+      - solution
+    env_file: 
+      - .license.env
+      - .idsettings.env
+
+  cm:
+    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-xm1-cm:${VERSION:-latest}
+    env_file: 
+      - .license.env
+    build:
+      context: ./docker/build/cm
+      args:
+        # based on default CM image
+        BASE_IMAGE: ${SITECORE_DOCKER_REGISTRY}sitecore-xm1-cm:${SITECORE_VERSION}
+        # + SPE
+        SPE_IMAGE: ${SITECORE_MODULE_REGISTRY}sitecore-spe-assets:${SPE_VERSION}
+        TOOLING_IMAGE: ${SITECORE_TOOLS_REGISTRY}sitecore-docker-tools-assets:${TOOLS_VERSION}
+        # + Management Service
+        MANAGEMENT_SERVICES_IMAGE: ${SITECORE_MODULE_REGISTRY}sitecore-management-services-xm1-assets:${MANAGEMENT_SERVICE_VERSION}
+        SOLUTION_IMAGE: ${REGISTRY}${COMPOSE_PROJECT_NAME}-solution:${VERSION:-latest}
+    depends_on:
+      - solution
+    environment:
+      SITECORE_DEVELOPMENT_PATCHES: CustomErrorsOff
+    volumes:
+      - ${LOCAL_DEPLOY_PATH}\platform:C:\deploy
+      - ${LOCAL_DATA_PATH}\cm:C:\inetpub\wwwroot\App_Data\logs
+    entrypoint: powershell -Command "& C:\\tools\\entrypoints\\iis\\Development.ps1"
+    ports:
+      - "4024:4024" # Visual Studio 2019
+      - "4022:4022" # Visual Studio 2017
+      - "8888:443" # for debug open http://127.0.0.1:8888/sitecore/
+
+volumes:
+  cache:

@@ -1,0 +1,15 @@
+{
+    "namespace": "DreamTeam.Feature.Content",
+    "references": [
+        "DreamTeam.Feature.Templates"
+    ],
+    "items": {
+        "includes": [
+            {
+                "name": "RootContentFolder",
+                "path": "/sitecore/content/Product Repo",
+                "allowedPushOperations": "CreateAndUpdate"
+            }
+        ]
+    }
+}

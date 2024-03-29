@@ -1,0 +1,58 @@
+﻿---
+UserName: |
+  sitecore\regular_user
+Email: user@dreamteam.local
+Comment: 
+Created: "03/02/2024 21:02:18"
+IsApproved: True
+Properties:
+- Key: FullName
+  Value: Regular User
+  ValueType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  IsCustomProperty: False
+- Key: IsAdministrator
+  Value: False
+  ValueType: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  IsCustomProperty: False
+- Key: Portrait
+  Value: office/16x16/default_user.png
+  ValueType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  IsCustomProperty: False
+- Key: ProfileItemId
+  Value: "{AE4C4969-5B7E-4B4E-9042-B2D8701CE214}"
+  ValueType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  IsCustomProperty: False
+- Key: digestcredentialhash
+  Value: aee5c05bc278dbb7c501bb450925e047
+  ValueType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  IsCustomProperty: True
+- Key: digestcredentialhashwithoutdomain
+  Value: ae0784be6c9faf5bdfd69e211810fa01
+  ValueType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  IsCustomProperty: True
+- Key: |
+    /sitecore\regular_user/Ribbon/My Strip
+  Value: "{D33A0641-9F1C-4984-8342-0655C3D0F123}"
+  ValueType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  IsCustomProperty: True
+- Key: |
+    /sitecore\regular_user/UserOptions.View.ShowEntireTree
+  Value: true
+  ValueType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  IsCustomProperty: True
+- Key: |
+    /sitecore\regular_user/UserOptions.View.ShowHiddenItems
+  Value: true
+  ValueType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  IsCustomProperty: True
+Roles:
+  MemberOf: |
+    sitecore\Designer
+  MemberOf: |
+    sitecore\Developer
+  MemberOf: |
+    sitecore\Sitecore Client Users
+  MemberOf: |
+    sitecore\Author
+  MemberOf: |
+    sitecore\Sitecore Client Authoring

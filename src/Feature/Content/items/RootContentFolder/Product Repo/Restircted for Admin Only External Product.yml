@@ -1,0 +1,38 @@
+﻿---
+ID: "ea770306-5ec6-4af3-b73f-10692caf744b"
+Parent: "05d201e2-00eb-4380-943c-833079ca638d"
+Template: "80d2892e-3a0a-472e-97ab-9fb3fbf42b5c"
+Path: /sitecore/content/Product Repo/Restircted for Admin Only External Product
+SharedFields:
+- ID: "1a07e817-0f77-4f53-8f86-de9127412db4"
+  Hint: Urn
+  Value: Product 1
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240302T190301Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8b815d66-2298-47ce-9453-8378db228842"
+    - ID: "9da0fcba-f62a-4e5e-a959-96cb760f558a"
+      Hint: Name
+      Value: Admin Only Product View
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20240302T211151Z

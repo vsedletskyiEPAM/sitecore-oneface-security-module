@@ -1,0 +1,76 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.31911.260
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Solution Files", ".Solution Files", "{196B5D43-B228-4632-9BC3-EAAF79B4EDA5}"
+	ProjectSection(SolutionItems) = preProject
+		DreamTeam.sln.DotSettings = DreamTeam.sln.DotSettings
+		..\nuget.config = ..\nuget.config
+		..\Packages.props = ..\Packages.props
+		..\README.md = ..\README.md
+		..\sitecore.json = ..\sitecore.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{4736C040-62A2-4E10-A376-0FD4B8B72E8D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Feature", "Feature", "{EE03412B-647E-416F-84A1-427E692BBBDB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project", "Project", "{0CA01507-AFE6-401B-AD20-3C3A8F34BF09}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Content", "Content", "{9024797F-EC79-4019-9076-C157020CF7D5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Security", "Security", "{8E8859F4-6EA3-463D-B8DE-B151C505A691}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DreamTeam.Feature.Content", "Feature\Content\code\DreamTeam.Feature.Content.csproj", "{C7F21ACB-16B5-4E74-9E55-8B4F8931471E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DreamTeam.Foundation.Security", "Foundation\Security\code\DreamTeam.Foundation.Security.csproj", "{43558362-D752-9427-3300-212F0CB8A8FC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Serialization", "Serialization", "{54B72404-12F2-4E4C-AC30-BA5AE20C7917}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extensions", "Extensions", "{FF0F293E-1B60-484F-9C37-B256AB1627B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DreamTeam.Foundation.Extensions", "Foundation\Extensions\code\DreamTeam.Foundation.Extensions.csproj", "{62F665AC-0B86-4330-A15F-F7E3A7CADD7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DreamTeam.Foundation.Serialization", "Foundation\Serialization\code\DreamTeam.Foundation.Serialization.csproj", "{B4CF0C95-BA06-478B-80EE-E19131276044}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C7F21ACB-16B5-4E74-9E55-8B4F8931471E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7F21ACB-16B5-4E74-9E55-8B4F8931471E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7F21ACB-16B5-4E74-9E55-8B4F8931471E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7F21ACB-16B5-4E74-9E55-8B4F8931471E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43558362-D752-9427-3300-212F0CB8A8FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43558362-D752-9427-3300-212F0CB8A8FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43558362-D752-9427-3300-212F0CB8A8FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43558362-D752-9427-3300-212F0CB8A8FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62F665AC-0B86-4330-A15F-F7E3A7CADD7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62F665AC-0B86-4330-A15F-F7E3A7CADD7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62F665AC-0B86-4330-A15F-F7E3A7CADD7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62F665AC-0B86-4330-A15F-F7E3A7CADD7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4CF0C95-BA06-478B-80EE-E19131276044}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4CF0C95-BA06-478B-80EE-E19131276044}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4CF0C95-BA06-478B-80EE-E19131276044}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4CF0C95-BA06-478B-80EE-E19131276044}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9024797F-EC79-4019-9076-C157020CF7D5} = {EE03412B-647E-416F-84A1-427E692BBBDB}
+		{8E8859F4-6EA3-463D-B8DE-B151C505A691} = {4736C040-62A2-4E10-A376-0FD4B8B72E8D}
+		{C7F21ACB-16B5-4E74-9E55-8B4F8931471E} = {9024797F-EC79-4019-9076-C157020CF7D5}
+		{43558362-D752-9427-3300-212F0CB8A8FC} = {8E8859F4-6EA3-463D-B8DE-B151C505A691}
+		{54B72404-12F2-4E4C-AC30-BA5AE20C7917} = {4736C040-62A2-4E10-A376-0FD4B8B72E8D}
+		{FF0F293E-1B60-484F-9C37-B256AB1627B3} = {4736C040-62A2-4E10-A376-0FD4B8B72E8D}
+		{62F665AC-0B86-4330-A15F-F7E3A7CADD7C} = {FF0F293E-1B60-484F-9C37-B256AB1627B3}
+		{B4CF0C95-BA06-478B-80EE-E19131276044} = {54B72404-12F2-4E4C-AC30-BA5AE20C7917}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7A7C4987-3A11-41A9-8915-5457EF7B5A6F}
+	EndGlobalSection
+EndGlobal
